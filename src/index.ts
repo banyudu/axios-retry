@@ -309,7 +309,7 @@ const axiosRetry: AxiosRetry = (axiosInstance, defaultOptions) => {
   });
 
   const responseInterceptorId = axiosInstance.interceptors.response.use(null, async (error) => {
-    const { config } = error;
+    const config = error?.config;
     // If we have no information to retry the request
     if (!config) {
       return Promise.reject(error);
