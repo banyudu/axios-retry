@@ -4,3 +4,4 @@ docs
 dist
 .eslintcache
 .npmrc
+package-lock.json
